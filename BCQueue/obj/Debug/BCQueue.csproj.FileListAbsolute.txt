@@ -1,0 +1,14 @@
+c:\users\clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\BCQueue.csprojResolveAssemblyReference.cache
+c:\users\clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\MainWindow.baml
+c:\users\clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\MainWindow.g.cs
+c:\users\clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\App.g.cs
+c:\users\clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\BCQueue_MarkupCompile.cache
+c:\users\clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\BCQueue.g.resources
+c:\users\clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\BCQueue.Properties.Resources.resources
+c:\users\clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\BCQueue.csproj.GenerateResource.Cache
+c:\users\clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\bin\Debug\BCQueue.exe
+c:\users\clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\bin\Debug\BCQueue.pdb
+c:\users\clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\BCQueue.exe
+c:\users\clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\BCQueue.pdb
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Debug\splash.baml
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Debug\splash.g.cs

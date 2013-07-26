@@ -1,0 +1,12 @@
+﻿<Window x:Class="BCQueue.splash"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="splash" Height="300" Width="500" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        WindowStyle="None">
+    <Grid>
+        <Button x:Name="startButton" Content="Button" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="500" Opacity="0" Click="startButtonClicked"/>
+    </Grid>
+</Window>
