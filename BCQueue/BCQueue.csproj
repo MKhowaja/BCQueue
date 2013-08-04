@@ -34,6 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight, Version=4.1.24.16215, Culture=neutral, PublicKeyToken=3e875cdb3903c512, processorArchitecture=MSIL" />
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=4.1.24.16215, Culture=neutral, PublicKeyToken=48c5515dce1bf64d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -53,8 +55,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Court.cs" />
     <Compile Include="Splash.xaml.cs">
       <DependentUpon>Splash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CreateProfileVM\CPFirstViewModel.cs" />
+    <Compile Include="ViewModels\CreateProfileVM\CPSecondViewModel.cs" />
+    <Compile Include="ViewModels\CreateProfileVM\CPThirdViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\StartViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelLocator.cs" />
+    <Compile Include="Views\CreateProfileViews\CPFirstView.xaml.cs">
+      <DependentUpon>CPFirstView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateProfileViews\CPSecondView.xaml.cs">
+      <DependentUpon>CPSecondView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateProfileViews\CPThirdView.xaml.cs">
+      <DependentUpon>CPThirdView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartView.xaml.cs">
+      <DependentUpon>StartView.xaml</DependentUpon>
     </Compile>
     <Page Include="Resources\ResourceDictionaries\Dictionary.xaml">
       <SubType>Designer</SubType>
@@ -68,13 +93,33 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Member.cs" />
-    <Compile Include="Profile.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\Profile.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Splash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateProfileViews\CPFirstView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateProfileViews\CPSecondView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateProfileViews\CPThirdView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StartView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -103,23 +148,32 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Resources\Images\LoadSave\createclub.png" />
-    <Resource Include="Resources\Images\LoadSave\createclub2.png" />
-    <Resource Include="Resources\Images\LoadSave\loadclub.png" />
-    <Resource Include="Resources\Images\LoadSave\loadclub2.png" />
+    <Resource Include="Resources\Images\Main Menu\Home.png" />
+    <Resource Include="Resources\Images\Start Menu\createclub.png" />
+    <Resource Include="Resources\Images\Start Menu\createclub2.png" />
+    <Resource Include="Resources\Images\Start Menu\loadclub.png" />
+    <Resource Include="Resources\Images\Start Menu\loadclub2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Images\General\backgroundTileBlack.jpg" />
-    <Resource Include="Resources\Images\General\backgroundTileGray.jpg" />
-    <Resource Include="Resources\Images\General\backgroundTileWhite.jpg" />
-    <Resource Include="Resources\Images\General\bcqueuelogo.png" />
+    <Resource Include="Resources\Images\General\Logo\bcqueuelogo.png" />
+    <Resource Include="Resources\Images\General\Logo\bcqueuelogo2.png" />
+    <Resource Include="Resources\Images\General\Logo\bcqueuelogo3.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Resources\Images\MainMenu\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
+    <Resource Include="Resources\Images\General\Background\backgroundStretchGray.jpg" />
+    <Resource Include="Resources\Images\General\Background\backgroundTileBlack.jpg" />
+    <Resource Include="Resources\Images\General\Background\backgroundTileGray.jpg" />
+    <Resource Include="Resources\Images\General\Background\backgroundTileWhite.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Main Menu\About.png" />
+    <Resource Include="Resources\Images\Main Menu\Add To Queue.png" />
+    <Resource Include="Resources\Images\Main Menu\Configure Club Profile.png" />
+    <Resource Include="Resources\Images\Main Menu\Player Sign-In.png" />
+    <Resource Include="Resources\Images\Main Menu\View Active Games.png" />
+    <Resource Include="Resources\Images\Main Menu\View Player Profile.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

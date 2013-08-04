@@ -8,9 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/general/backgroundtileblack.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/general/backgroundtilegray.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/general/backgroundtilewhite.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/general/bcqueuelogo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/main%20menu/about.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/main%20menu/add%20to%20queue.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/main%20menu/configure%20club%20profile.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/main%20menu/player%20sign-in.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/main%20menu/view%20active%20games.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/main%20menu/view%20player%20profile.png")]
 
 

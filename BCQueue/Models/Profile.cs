@@ -19,10 +19,4 @@ namespace BCQueue
 
         
     }
-   
-    [Serializable]
-    public class Court
-    {
-        public Boolean isCourtActive { get; set; } //indicates whether a certain court is available for usage
-    }
 }
