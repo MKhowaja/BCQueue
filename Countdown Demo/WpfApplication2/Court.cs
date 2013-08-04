@@ -6,7 +6,7 @@ using System.Windows.Data;
 using System.ComponentModel;
 using System.Threading;
 
-namespace WpfApplication1
+namespace WpfApplication2
 {
     public delegate void Invoker();
 
@@ -36,18 +36,12 @@ namespace WpfApplication1
         }
         ~Court()
         {
-            Dispose();
-        }
-
-        public void Dispose()
-        {
             OnTick -= new EventHandler(TimerTextBlock_OnTick);
         }
 
         /// <summary>
         /// Represents the time remaining for the count down to complete if
-        /// the control is initialized as a count down timer otherwise, it 
-        /// represents the time elapsed since the timer has started.
+        /// the control is initialized as a count down timer
         /// </summary>
         /// <exception cref="System.ArgumentException">
         /// </exception>
@@ -63,39 +57,7 @@ namespace WpfApplication1
         }
         // Using a DependencyProperty as the backing store for TimeSpan.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TimeSpanProperty =
-            DependencyProperty.Register("TimeSpan", typeof(TimeSpan), typeof(TimerTextBlock), new UIPropertyMetadata(TimeSpan.Zero));
-        //public DateTime BaseTime
-        //{
-        //    get { return (DateTime)GetValue(BaseTimeProperty); }
-        //    set { SetValue(BaseTimeProperty, value); }
-        //}
-
-        //// Using a DependencyProperty as the backing store for SourceText.  This enables animation, styling, binding, etc...
-        //public static readonly DependencyProperty BaseTimeProperty =
-        //    DependencyProperty.Register("BaseTime", typeof(DateTime), typeof(TimerTextBlock), new UIPropertyMetadata(DateTime.MinValue));
-
-        //public string TimeText
-        //{
-        //    get { return _timedText; }
-        //    set
-        //    {
-        //        if (_timedText != value)
-        //        {
-        //            _timedText = value;
-        //            NotifyPropertyChanged("TimeText");
-        //        }
-        //    }
-        //}
-
-        //public TimeSpan CountDownTime
-        //{
-        //    get { return (TimeSpan)GetValue(CountDownTimeProperty); }
-        //    set { SetValue(CountDownTimeProperty, value); }
-        //}
-
-        //// Using a DependencyProperty as the backing store for CountDownTime.  This enables animation, styling, binding, etc...
-        //public static readonly DependencyProperty CountDownTimeProperty =
-        //    DependencyProperty.Register("CountDownTime", typeof(TimeSpan), typeof(TimerTextBlock), new UIPropertyMetadata(0));
+            DependencyProperty.Register("TimeSpan", typeof(TimeSpan), typeof(Court), new UIPropertyMetadata(TimeSpan.Zero));
 
         public bool IsStarted
         {
@@ -105,7 +67,8 @@ namespace WpfApplication1
 
         // Using a DependencyProperty as the backing store for IsDisplayTime. This enables animation, styling, binding, etc...
         public static readonly DependencyProperty IsStartedProperty =
-            DependencyProperty.Register("IsStarted", typeof(bool), typeof(TimerTextBlock), new UIPropertyMetadata(false));
+            DependencyProperty.Register("IsStarted", typeof(bool), typeof(Court), new UIPropertyMetadata(false));
+
         /// <summary        
         /// Format string for displaying the time span value.
         /// </summary>
@@ -115,9 +78,9 @@ namespace WpfApplication1
             set { SetValue(TimeFormatProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for TimeFormat. This enables animation, styling, binding, etc...
+        // Using a DependencyProperty as the backing store for TimeFormat
         public static readonly DependencyProperty TimeFormatProperty =
-            DependencyProperty.Register("TimeFormat", typeof(string), typeof(TimerTextBlock), new UIPropertyMetadata(null));
+            DependencyProperty.Register("TimeFormat", typeof(string), typeof(Court), new UIPropertyMetadata(null));
         /// <summary>
         /// Represents whether the control is a CountDown or regular timer.
         /// </summary>
@@ -127,9 +90,9 @@ namespace WpfApplication1
             set { SetValue(IsCountDownProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for IsCountDown.  This enables animation, styling, binding, etc...
+        // Using a DependencyProperty as the backing store for IsCountDown
         public static readonly DependencyProperty IsCountDownProperty =
-            DependencyProperty.Register("IsCountDown", typeof(bool), typeof(TimerTextBlock), new UIPropertyMetadata(false));
+            DependencyProperty.Register("IsCountDown", typeof(bool), typeof(Court), new UIPropertyMetadata(false));
 
         /// <summary>
         /// Sets the time span to zero and stops the timer.
