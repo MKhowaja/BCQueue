@@ -9,8 +9,9 @@ namespace BCQueue.ViewModels
     {
         public StartViewModel()
         {
-            ShowCreateClubInterface = new RelayCommand(() => CreateClubInterfaceExecute()); //used to have a ()=>true here
             ShowLoadClubInterface = new RelayCommand(() => LoadClubInterfaceExecute());
+            ShowCreateClubInterface = new RelayCommand(() => CreateClubInterfaceExecute());
+
         }
 
         public ICommand ShowCreateClubInterface { get; private set; }
@@ -18,7 +19,7 @@ namespace BCQueue.ViewModels
 
         private static void CreateClubInterfaceExecute()
         {
-            //TODO: call method that switches view
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.CurrentViewModel = MainViewModel._cPBaseViewModel;
         }
 
         private static void LoadClubInterfaceExecute()

@@ -8,6 +8,6 @@ namespace BCQueue
     [Serializable]
     public class Court
     {
-        public Boolean isCourtActive { get; set; } //indicates whether a certain court is available for usage
+        public Boolean IsCourtActive { get; set; } //indicates whether a certain court is available for usage
     }
 }

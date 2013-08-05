@@ -12,14 +12,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BCQueue
+namespace BCQueue.Views.CreateProfileViews
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CPBaseView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CPBaseView : UserControl
     {
-        public MainWindow()
+        public CPBaseView()
         {
             InitializeComponent();
         }

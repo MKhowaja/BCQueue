@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\App.xaml
-8-1832302313
+9717567086
 
-211999336410
+241055895931
 14-809225561
-Resources\ResourceDictionaries\Dictionary.xaml;MainWindow.xaml;Splash.xaml;Views\CreateProfileViews\CPFirstView.xaml;Views\CreateProfileViews\CPSecondView.xaml;Views\CreateProfileViews\CPThirdView.xaml;Views\HomeView.xaml;Views\StartView.xaml;
+Resources\ResourceDictionaries\Dictionary.xaml;MainWindow.xaml;Splash.xaml;Views\CreateProfileViews\CPBaseView.xaml;Views\CreateProfileViews\CPFirstView.xaml;Views\CreateProfileViews\CPSecondView.xaml;Views\CreateProfileViews\CPThirdView.xaml;Views\HomeView.xaml;Views\StartView.xaml;
 
 False
 

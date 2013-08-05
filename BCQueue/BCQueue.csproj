@@ -59,13 +59,18 @@
     <Compile Include="Splash.xaml.cs">
       <DependentUpon>Splash.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\CreateProfileVM\CPBaseViewModel.cs" />
     <Compile Include="ViewModels\CreateProfileVM\CPFirstViewModel.cs" />
     <Compile Include="ViewModels\CreateProfileVM\CPSecondViewModel.cs" />
     <Compile Include="ViewModels\CreateProfileVM\CPThirdViewModel.cs" />
+    <Compile Include="ViewModels\CreateProfileVM\CPViewModelLocator.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\StartViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
+    <Compile Include="Views\CreateProfileViews\CPBaseView.xaml.cs">
+      <DependentUpon>CPBaseView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CreateProfileViews\CPFirstView.xaml.cs">
       <DependentUpon>CPFirstView.xaml</DependentUpon>
     </Compile>
@@ -100,6 +105,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Splash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateProfileViews\CPBaseView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

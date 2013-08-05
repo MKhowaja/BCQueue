@@ -6,7 +6,7 @@ using GalaSoft.MvvmLight.Command;
 
 namespace BCQueue.ViewModels.CreateProfileVM
 {
-    class CPFirstViewModel : ViewModelBase
+    public class CPFirstViewModel : ViewModelBase
     {
     }
 }

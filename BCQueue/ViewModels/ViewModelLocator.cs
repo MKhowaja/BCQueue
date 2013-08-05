@@ -10,7 +10,7 @@ namespace BCQueue.ViewModels
     public class ViewModelLocator
     {
         private static MainViewModel _main;
-
+        
 
         // Initializes a new instance of the ViewModelLocator class.
         public ViewModelLocator()

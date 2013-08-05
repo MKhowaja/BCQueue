@@ -6,6 +6,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="768" d:DesignWidth="1366">
     <Grid>
-            
+        <Label Content="CPFirstView" FontSize="60" HorizontalAlignment="Left" Margin="384,360,0,0" VerticalAlignment="Top" Height="110" Width="450"/>
+
     </Grid>
 </UserControl>

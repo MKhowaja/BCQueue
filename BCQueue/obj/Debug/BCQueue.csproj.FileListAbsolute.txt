@@ -34,3 +34,5 @@ C:\Users\Clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug
 C:\Users\Clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\Views\StartView.g.cs
 C:\Users\Clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\BCQueue_MarkupCompile.lref
 C:\Users\Clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Debug\Views\CreateProfileViews\CPBaseView.baml
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Debug\Views\CreateProfileViews\CPBaseView.g.cs
