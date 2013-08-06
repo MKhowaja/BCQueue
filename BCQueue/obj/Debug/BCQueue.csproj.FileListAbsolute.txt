@@ -12,7 +12,6 @@ c:\users\clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug
 c:\users\clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\BCQueue.pdb
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Debug\splash.baml
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Debug\splash.g.cs
-C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Debug\Resources\ResourceDictionaries\Dictionary.baml
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Debug\App.baml
 C:\Users\Clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\bin\Debug\GalaSoft.MvvmLight.dll
 C:\Users\Clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\bin\Debug\GalaSoft.MvvmLight.Extras.dll
@@ -36,3 +35,4 @@ C:\Users\Clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug
 C:\Users\Clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Debug\Views\CreateProfileViews\CPBaseView.baml
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Debug\Views\CreateProfileViews\CPBaseView.g.cs
+C:\Users\Clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Debug\Resources\ResourceDictionaries\Styles.baml

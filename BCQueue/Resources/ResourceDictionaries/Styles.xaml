@@ -1,0 +1,40 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:BCQueue;assembly=BCQueue">
+    <Style TargetType="TextBox">
+        <Setter Property="Background" Value="Gray"></Setter>
+    </Style>
+
+    <Style x:Key="LoadButton" TargetType="Button" >
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Start Menu/loadclub.png"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <UserControl Background="{TemplateBinding Background}">
+                        <ContentPresenter/>
+                    </UserControl>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="CreateButton" TargetType="Button" >
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Start Menu/createclub.png"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <UserControl Background="{TemplateBinding Background}">
+                        <ContentPresenter/>
+                    </UserControl>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

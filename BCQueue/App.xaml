@@ -7,12 +7,13 @@
              xmlns:v="clr-namespace:BCQueue.Views"
              xmlns:CPvm="clr-namespace:BCQueue.ViewModels.CreateProfileVM"
              xmlns:CPv="clr-namespace:BCQueue.Views.CreateProfileViews"
+            
              StartupUri="Splash.xaml"
              mc:Ignorable="d">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/ResourceDictionaries/Dictionary.xaml"/>
+                <ResourceDictionary Source="Resources/ResourceDictionaries/Styles.xaml"/>
                 <ResourceDictionary>
                     <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
                     <CPvm:CPViewModelLocator x:Key="CPLocator" d:IsDataSource="True"/>
@@ -34,6 +35,7 @@
                     <DataTemplate DataType="{x:Type CPvm:CPBaseViewModel}">
                         <CPv:CPBaseView/>
                     </DataTemplate>
+                    
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

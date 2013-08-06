@@ -8,7 +8,6 @@ C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\bin\Relea
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\bin\Release\GalaSoft.MvvmLight.Extras.xml
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\bin\Release\System.Windows.Interactivity.xml
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\bin\Release\Microsoft.Practices.ServiceLocation.xml
-C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Resources\ResourceDictionaries\Dictionary.baml
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\MainWindow.baml
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Splash.baml
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\CreateProfileViews\CPBaseView.baml
@@ -36,3 +35,4 @@ C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Relea
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\BCQueue.exe
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\BCQueue.pdb
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\BCQueue.csprojResolveAssemblyReference.cache
+C:\Users\Clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Release\Resources\ResourceDictionaries\Styles.baml

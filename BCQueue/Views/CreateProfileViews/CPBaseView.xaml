@@ -13,7 +13,7 @@
             <ColumnDefinition Width="0.75*"/>
         </Grid.ColumnDefinitions>
         <!--Navigation menu here-->
-        <Viewbox Grid.Column="0">
+        <!--Viewbox Grid.Column="0"-->
             <StackPanel>
                 <StackPanel.Resources>
                     <Style TargetType="Button" x:Key="CPNavigation">
@@ -21,14 +21,11 @@
                     </Style>
                 </StackPanel.Resources>
                 <Label>Creating Club Profile</Label>
-                <Button Style="{StaticResource CPNavigation}" Command="{Binding CPFirstViewCommand}">Club Name</Button>
-                <Button Style="{StaticResource CPNavigation}" Command="{Binding CPSecondViewCommand}">More stuff</Button>
-                <Button Style="{StaticResource CPNavigation}" Command="{Binding CPThirdViewCommand}">Even more stuff</Button>
-                <Button Style="{StaticResource CPNavigation}" Command="{Binding CPFirstViewCommand}">Even more stuff</Button>
-                <Button Style="{StaticResource CPNavigation}" Command="{Binding CPFirstViewCommand}">Even more stuff</Button>
-                <!--Try to link it to diff. views-->
+                <Button Style="{StaticResource CPNavigation}" Command="{Binding CPFirstViewCommand}">General Club Info</Button>
+                <Button Style="{StaticResource CPNavigation}" Command="{Binding CPSecondViewCommand}">Players List</Button>
+                <Button Style="{StaticResource CPNavigation}" Command="{Binding CPThirdViewCommand}">Other Settings</Button>
             </StackPanel>
-        </Viewbox>
+        <!--/Viewbox-->
         <ContentControl x:Name ="controlbox" Grid.Column="1" Content="{Binding CurrentCPViewModel}"/>
     </Grid>
 
