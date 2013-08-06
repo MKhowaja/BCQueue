@@ -5,7 +5,7 @@ using System.Text;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
 
-namespace Serializing3
+namespace BCQueue
 {
     [Serializable]
     public class Court : ISerializable
