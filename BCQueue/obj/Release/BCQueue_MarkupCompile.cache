@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Debug\
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\
 BCQueue
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\App.xaml
 9717567086
 

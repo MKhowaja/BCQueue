@@ -7,26 +7,42 @@ namespace BCQueue
 {
     public class Member
     {
+        #region enum declarations
+        public enum pd { Singles = 0, Doubles = 1, Mixed = 2, None = 3 }
+        public enum sl {Beginner = 0, Intermediate = 1, Advanced = 2, Tournament = 3, Unknown = 4}
+        #endregion
+
+        private pd _preferredDiscipline;
+        private sl _skillLevel;
         public int GamesWon { get; set; }
         public int GamesLost { get; set; }
         public int TotalGames { get {return GamesLost+GamesWon;} }
-        public int SkillLevel { get; set; } //make enum later (Beginner, Intermediate, Advanced, Tournament-Level)
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int PreferredDiscipline
-        { //1 - Singles, 2 - Doubles, 3 - Mixed, 4 - N/A ->also make enum
-            get
-            {
-                return PreferredDiscipline;
-            }
+        public pd PreferredDiscipline
+        { 
+            get {return _preferredDiscipline;}
             set
             {
-                if (value > 0 && value < 4)
-                    PreferredDiscipline = value;
+                if ((int)value < 0 || (int)value > 3)
+                    _preferredDiscipline = value;
                 else
-                    PreferredDiscipline = 4;
+                    _preferredDiscipline = pd.None;
             } 
         } 
+        public sl SkillLevel
+        {
+            get {return _skillLevel;}
+            set
+            {
+                if ((int)value < 0 || (int)value > 4)
+                    _skillLevel = value;
+                else
+                    _skillLevel = sl.Unknown;
+            }
+        }
+
+        
         
     }
 }

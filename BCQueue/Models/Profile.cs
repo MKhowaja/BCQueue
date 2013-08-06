@@ -11,6 +11,7 @@ namespace BCQueue
         private Court[] _courts;
         private List<Member> _members;
 
+        public String Name { get; set; }
         public int NumCourts { get {return NumRows*NumColumns;} } //number of courts in the gym
         public int NumRows { get; set; } 
         public int NumColumns { get; set; }
