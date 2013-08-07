@@ -5,7 +5,51 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="768" d:DesignWidth="1366">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BCQueue;component/Resources/Images/General/Background/backgroundStretchGray.jpg"/>
+    </UserControl.Background>
+    
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="/BCQueue;component/Resources/Images/General/Logo/bcqueuelogo3.png" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="40 5 5 5"></Image>
+        <Button Grid.Row="1" Grid.Column="0">
+            <Button.Background>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Main Menu/View Active Games.png" Stretch="Uniform"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="1">
+            <Button.Background>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Main Menu/Add To Queue.png" Stretch="Uniform"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="2">
+            <Button.Background>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Main Menu/Player Sign-In.png" Stretch="Uniform"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="0">
+            <Button.Background>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Main Menu/View Player Profile.png" Stretch="Uniform"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="1">
+            <Button.Background>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Main Menu/Configure Club Profile.png" Stretch="Uniform"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="2">
+            <Button.Background>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Main Menu/About.png" Stretch="Uniform"></ImageBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </UserControl>
