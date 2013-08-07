@@ -16,6 +16,14 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
+    <Style TargetType="UserControl" x:Key="Normal">
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/General/Background/backgroundStretchGray.jpg"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
     <!--StartView Button Styles Start-->
     <Style x:Key="LoadButton" TargetType="Button" BasedOn="{StaticResource RemoveControlTemplate}">
