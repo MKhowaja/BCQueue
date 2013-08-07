@@ -7,7 +7,8 @@
              xmlns:v="clr-namespace:BCQueue.Views"
              xmlns:CPvm="clr-namespace:BCQueue.ViewModels.CreateProfileVM"
              xmlns:CPv="clr-namespace:BCQueue.Views.CreateProfileViews"
-            
+             xmlns:MMvm="clr-namespace:BCQueue.ViewModels.MainMenuVM"
+             xmlns:MMv="clr-namespace:BCQueue.Views.MainMenuViews"       
              StartupUri="Splash.xaml"
              mc:Ignorable="d">
     <Application.Resources>
@@ -35,7 +36,24 @@
                     <DataTemplate DataType="{x:Type CPvm:CPBaseViewModel}">
                         <CPv:CPBaseView/>
                     </DataTemplate>
-                    
+                    <DataTemplate DataType="{x:Type MMvm:MMAboutVM}">
+                        <MMv:MMAboutView/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type MMvm:MMAddToQueueVM}">
+                        <MMv:MMAddToQueueView/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type MMvm:MMConfigureClubProfileVM}">
+                        <MMv:MMConfigureClubProfileView/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type MMvm:MMPlayerSignInVM}">
+                        <MMv:MMPlayerSignInView/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type MMvm:MMViewActiveGamesVM}">
+                        <MMv:MMViewActiveGamesView/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type MMvm:MMViewPlayerProfilesVM}">
+                        <MMv:MMViewPlayerProfileView/>
+                    </DataTemplate>
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

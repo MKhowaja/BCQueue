@@ -65,6 +65,12 @@
     <Compile Include="ViewModels\CreateProfileVM\CPThirdViewModel.cs" />
     <Compile Include="ViewModels\CreateProfileVM\CPViewModelLocator.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\MainMenuVM\MMAboutVM.cs" />
+    <Compile Include="ViewModels\MainMenuVM\MMAddToQueueVM.cs" />
+    <Compile Include="ViewModels\MainMenuVM\MMConfigureClubProfileVM.cs" />
+    <Compile Include="ViewModels\MainMenuVM\MMPlayerSignInVM.cs" />
+    <Compile Include="ViewModels\MainMenuVM\MMViewActiveGamesVM.cs" />
+    <Compile Include="ViewModels\MainMenuVM\MMViewPlayerProfilesVM.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\StartViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
@@ -82,6 +88,24 @@
     </Compile>
     <Compile Include="Views\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMenuViews\MMAboutView.xaml.cs">
+      <DependentUpon>MMAboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMenuViews\MMAddToQueueView.xaml.cs">
+      <DependentUpon>MMAddToQueueView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMenuViews\MMConfigureClubProfileView.xaml.cs">
+      <DependentUpon>MMConfigureClubProfileView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMenuViews\MMPlayerSignInView.xaml.cs">
+      <DependentUpon>MMPlayerSignInView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMenuViews\MMViewActiveGamesView.xaml.cs">
+      <DependentUpon>MMViewActiveGamesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMenuViews\MMViewPlayerProfileView.xaml.cs">
+      <DependentUpon>MMViewPlayerProfileView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StartView.xaml.cs">
       <DependentUpon>StartView.xaml</DependentUpon>
@@ -125,6 +149,30 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainMenuViews\MMAboutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainMenuViews\MMAddToQueueView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainMenuViews\MMConfigureClubProfileView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainMenuViews\MMPlayerSignInView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainMenuViews\MMViewActiveGamesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainMenuViews\MMViewPlayerProfileView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

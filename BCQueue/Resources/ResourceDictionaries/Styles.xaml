@@ -4,13 +4,8 @@
     <Style TargetType="TextBox">
         <Setter Property="Background" Value="Gray"></Setter>
     </Style>
-
-    <Style x:Key="LoadButton" TargetType="Button" >
-        <Setter Property="Background">
-            <Setter.Value>
-                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Start Menu/loadclub.png"/>
-            </Setter.Value>
-        </Setter>
+    
+    <Style x:Key="RemoveControlTemplate" TargetType="Button">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -21,19 +16,64 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style x:Key="CreateButton" TargetType="Button" >
+
+    <!--StartView Button Styles Start-->
+    <Style x:Key="LoadButton" TargetType="Button" BasedOn="{StaticResource RemoveControlTemplate}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Start Menu/loadclub.png"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="CreateButton" TargetType="Button" BasedOn="{StaticResource RemoveControlTemplate}">
         <Setter Property="Background">
             <Setter.Value>
                 <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Start Menu/createclub.png"/>
             </Setter.Value>
         </Setter>
-        <Setter Property="Template">
+    </Style>
+    <!--StartView Button Styles End-->
+    
+    <!--HomeView Button Styles Start-->
+    <Style x:Key="ViewActiveGamesButton" TargetType="Button" BasedOn="{StaticResource RemoveControlTemplate}">
+        <Setter Property="Background">
             <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <UserControl Background="{TemplateBinding Background}">
-                        <ContentPresenter/>
-                    </UserControl>
-                </ControlTemplate>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Main Menu/View Active Games.png" Stretch="Uniform"></ImageBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="AddToQueueButton" TargetType="Button" BasedOn="{StaticResource RemoveControlTemplate}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Main Menu/Add To Queue.png" Stretch="Uniform"></ImageBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="PlayerSignInButton" TargetType="Button" BasedOn="{StaticResource RemoveControlTemplate}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Main Menu/Player Sign-In.png" Stretch="Uniform"></ImageBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ViewPPButton" TargetType="Button" BasedOn="{StaticResource RemoveControlTemplate}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Main Menu/View Player Profile.png" Stretch="Uniform"></ImageBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ConfigureCPButton" TargetType="Button" BasedOn="{StaticResource RemoveControlTemplate}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Main Menu/Configure Club Profile.png" Stretch="Uniform"></ImageBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="AboutButton" TargetType="Button" BasedOn="{StaticResource RemoveControlTemplate}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Main Menu/About.png" Stretch="Uniform"></ImageBrush>
             </Setter.Value>
         </Setter>
     </Style>
