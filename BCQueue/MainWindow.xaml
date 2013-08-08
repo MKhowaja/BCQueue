@@ -7,7 +7,12 @@
         WindowState="Maximized" Topmost="True" mc:Ignorable="d"
         DataContext="{Binding Main, Source={StaticResource Locator}}">
     <Grid>
-        <ContentControl Content="{Binding CurrentViewModel}"/>
-       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.8*"/>
+        </Grid.RowDefinitions>
+        <ContentControl Content="{Binding CurrentViewModel}" Grid.RowSpan="2"/>
+        <Button x:Name="HomeButton" Style="{StaticResource HomeButton}" Visibility="{Binding HomeButtonVisibility, Mode=TwoWay}" Command="{Binding HomeViewCommand}"/>
+        
     </Grid>
 </Window>

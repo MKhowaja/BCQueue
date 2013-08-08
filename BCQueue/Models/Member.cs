@@ -14,6 +14,8 @@ namespace BCQueue
 
         private pd _preferredDiscipline;
         private sl _skillLevel;
+        public String AboutMe { get; set; }
+        public bool Gender { get; set; }
         public int GamesWon { get; set; }
         public int GamesLost { get; set; }
         public int TotalGames { get {return GamesLost+GamesWon;} }

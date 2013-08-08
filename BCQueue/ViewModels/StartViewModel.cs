@@ -25,6 +25,7 @@ namespace BCQueue.ViewModels
         private static void LoadClubInterfaceExecute()
         {
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.CurrentViewModel = MainViewModel._homeViewModel;
+            
         }
     }
 }

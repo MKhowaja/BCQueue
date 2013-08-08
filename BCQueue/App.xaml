@@ -8,7 +8,8 @@
              xmlns:CPvm="clr-namespace:BCQueue.ViewModels.CreateProfileVM"
              xmlns:CPv="clr-namespace:BCQueue.Views.CreateProfileViews"
              xmlns:MMvm="clr-namespace:BCQueue.ViewModels.MainMenuVM"
-             xmlns:MMv="clr-namespace:BCQueue.Views.MainMenuViews"       
+             xmlns:MMv="clr-namespace:BCQueue.Views.MainMenuViews"   
+             xmlns:local="clr-namespace:BCQueue"
              StartupUri="Splash.xaml"
              mc:Ignorable="d">
     <Application.Resources>

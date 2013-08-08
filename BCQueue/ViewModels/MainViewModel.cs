@@ -2,11 +2,27 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using System.Windows;
+using System.ComponentModel;
+
 
 namespace BCQueue.ViewModels
 {
-    public class MainViewModel: ViewModelBase
+    public class MainViewModel: ViewModelBase, INotifyPropertyChanged
     {
+
+        private string _homeButtonVisibility;
+        public string HomeButtonVisibility { 
+            get { return _homeButtonVisibility; } 
+            set 
+            {
+                if (value == "Collapsed" || value == "Hidden" || value == "Visible")
+                {
+                    _homeButtonVisibility = value;
+                    RaisePropertyChanged("HomeButtonVisibility");
+                }
+            }
+        }
+
         private ViewModelBase _currentViewModel;
 
         #region Static Instances of ViewModels
@@ -50,34 +66,42 @@ namespace BCQueue.ViewModels
         public ICommand MMPlayerSignInViewCommand { get; private set; }
         public ICommand MMViewActiveGamesViewCommand { get; private set; }
         public ICommand MMViewPPViewCommand { get; private set; }
+        
 
         private void ExecuteHomeViewCommand()
         {
             CurrentViewModel = MainViewModel._homeViewModel;
+            HomeButtonVisibility = "Collapsed";
         }
         private void ExecuteMMAboutViewCommand()
         {
             CurrentViewModel = MainViewModel._mMAboutVM;
+            HomeButtonVisibility = "Visible";
         }
         private void ExecuteMMAddToQueueViewCommand()
         {
             CurrentViewModel = MainViewModel._mMAddToQueueVM;
+            HomeButtonVisibility = "Visible";
         }
         private void ExecuteMMConfigureCPViewCommand()
         {
             CurrentViewModel = MainViewModel._mMConfigureClubProfileVM;
+            HomeButtonVisibility = "Visible";
         }
         private void ExecuteMMPlayerSignInViewCommand()
         {
             CurrentViewModel = MainViewModel._mMPlayerSignInVM;
+            HomeButtonVisibility = "Visible";
         }
         private void ExecuteMMViewActiveGamesViewCommand()
         {
             CurrentViewModel = MainViewModel._mMViewActiveGamesVM;
+            HomeButtonVisibility = "Visible";
         }
         private void ExecuteMMViewPPViewCommand()
         {
             CurrentViewModel = MainViewModel._mMViewPlayerProfilesVM;
+            HomeButtonVisibility = "Visible";
         }
 
      
@@ -85,6 +109,7 @@ namespace BCQueue.ViewModels
         public MainViewModel()
         {
             CurrentViewModel = MainViewModel._startViewModel;
+            HomeButtonVisibility = "Collapsed";
 
             HomeViewCommand = new RelayCommand(() => ExecuteHomeViewCommand());
             MMAboutViewCommand = new RelayCommand(() => ExecuteMMAboutViewCommand());
@@ -94,6 +119,10 @@ namespace BCQueue.ViewModels
             MMViewActiveGamesViewCommand = new RelayCommand(() => ExecuteMMViewActiveGamesViewCommand());
             MMViewPPViewCommand = new RelayCommand(() => ExecuteMMViewPPViewCommand());
         }
+
+        
+
+      
 
     }
 }

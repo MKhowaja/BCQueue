@@ -36,3 +36,15 @@ C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Relea
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\BCQueue.pdb
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\BCQueue.csprojResolveAssemblyReference.cache
 C:\Users\Clement\documents\visual studio 2012\Projects\BCQueue\BCQueue\obj\Release\Resources\ResourceDictionaries\Styles.baml
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMAboutView.baml
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMAddToQueueView.baml
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMConfigureClubProfileView.baml
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMPlayerSignInView.baml
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMViewActiveGamesView.baml
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMViewPlayerProfileView.baml
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMAboutView.g.cs
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMAddToQueueView.g.cs
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMConfigureClubProfileView.g.cs
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMPlayerSignInView.g.cs
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMViewActiveGamesView.g.cs
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMViewPlayerProfileView.g.cs

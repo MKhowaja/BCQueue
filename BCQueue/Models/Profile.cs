@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Collections.ObjectModel;
 
 namespace BCQueue
 {
@@ -9,7 +10,7 @@ namespace BCQueue
     public class Profile
     {
         private Court[] _courts;
-        private List<Member> _members;
+        private ObservableCollection<Member> _members;
 
         public String Name { get; set; }
         public int NumCourts { get {return NumRows*NumColumns;} } //number of courts in the gym
