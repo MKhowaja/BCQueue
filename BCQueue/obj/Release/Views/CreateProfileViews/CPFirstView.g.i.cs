@@ -9,7 +9,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using BCQueue;
 using System;
 using System.Diagnostics;
 using System.Windows;

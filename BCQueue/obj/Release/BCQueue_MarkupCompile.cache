@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\user\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\
+C:\Users\Clement\Documents\GitHub\BCQueue\BCQueue\obj\Release\
 BCQueue
 none
 false
 TRACE
-C:\Users\user\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\App.xaml
+C:\Users\Clement\Documents\GitHub\BCQueue\BCQueue\App.xaml
 15-1466368841
 
 36702172191
-141305859382
+14-809225561
 Resources\ResourceDictionaries\Styles.xaml;MainWindow.xaml;Splash.xaml;Views\CreateProfileViews\CPBaseView.xaml;Views\CreateProfileViews\CPFirstView.xaml;Views\CreateProfileViews\CPSecondView.xaml;Views\CreateProfileViews\CPThirdView.xaml;Views\HomeView.xaml;Views\MainMenuViews\MMAboutView.xaml;Views\MainMenuViews\MMAddToQueueView.xaml;Views\MainMenuViews\MMConfigureClubProfileView.xaml;Views\MainMenuViews\MMPlayerSignInView.xaml;Views\MainMenuViews\MMViewActiveGamesView.xaml;Views\MainMenuViews\MMViewPlayerProfileView.xaml;Views\StartView.xaml;
 
 False

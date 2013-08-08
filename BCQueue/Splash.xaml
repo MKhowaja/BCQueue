@@ -13,7 +13,7 @@
             </Grid.Background>
             <Image Source="/BCQueue;component/Resources/Images/General/Logo/bcqueuelogo.png"/>
             <Button x:Name="startButton" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="500" Opacity="0" Click="startButtonClicked"></Button>
-            <Label Content="Click anywhere to continue..." Margin="280 210 20 20" FontSize="14"/>
+            <Label FontFamily="Agency FB"  Content="Click anywhere to continue..." Margin="280 210 20 20" FontSize="14"/>
         </Grid>
     </Viewbox>
 
