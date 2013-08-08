@@ -15,9 +15,9 @@
             <RowDefinition Height="0.4*"/>
             <RowDefinition Height="0.6*"/>
         </Grid.RowDefinitions>
-        
-        <Button x:Name="CreateButton" Style="{StaticResource CreateButton}"  Grid.Column="0" Grid.Row="1" Margin="150 75 75 75" FontSize="20" Command="{Binding ShowCreateClubInterface}"/>
-        <Button x:Name="LoadButton" Style="{StaticResource LoadButton}"  Grid.Column="1" Grid.Row="1" Margin="75 75 150 75" FontSize="20" Command="{Binding ShowLoadClubInterface}"/>
+        <Image Source="/BCQueue;component/Resources/Images/General/Logo/bcqueuelogo.png" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="40 5 5 5"></Image>
+        <Button x:Name="CreateButton" Style="{StaticResource CreateButton}"  Grid.Column="0" Grid.Row="1" Margin="150 75 75 75" FontSize="20" Command="{Binding ShowCreateClubInterface}" Cursor="Hand"/>
+        <Button x:Name="LoadButton" Style="{StaticResource LoadButton}"  Grid.Column="1" Grid.Row="1" Margin="75 75 150 75" FontSize="20" Command="{Binding ShowLoadClubInterface}" Cursor="Hand"/>
     </Grid>
     
 </UserControl>

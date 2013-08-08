@@ -39,6 +39,7 @@
             <Setter.Value>
                 <ImageBrush ImageSource="/BCQueue;component/Resources/Images/Start Menu/createclub.png"/>
             </Setter.Value>
+            
         </Setter>
     </Style>
     <!--StartView Button Styles End-->
