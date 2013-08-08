@@ -9,11 +9,17 @@
     <Viewbox Height="768" Width="1024" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Grid Height="768" Width="1024">
             <Grid.RowDefinitions>
-                <RowDefinition/>
+                <RowDefinition Height="384"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label Content="Please enter the name of the club." Grid.Row="0"/>
-            <TextBox Grid.Row="2"/>
+            <Label Content="Name of Club:" Grid.Row="0" FontSize="18" FontWeight="Bold" Margin="0,10,871,330"/>
+            <Label Content="Number of Courts" Grid.Row="0" FontSize="18" Margin="0,138,853,205" FontWeight="Bold"/>
+            <Label Content="Number of Columns:" Grid.Row="0" FontSize="18" Margin="561,214,36,126" FontWeight="Bold"/>
+            <Label Content="Number of Rows:" Grid.Row="0" FontSize="18" Margin="0,214,630,126" FontWeight="Bold"/>
+            <TextBox Margin="0,59,0,283" FontSize="20"/>
+            <Button Content="Next" Command="{Binding CPNextPageCommand}" HorizontalAlignment="Left" Margin="762,329,0,0" Grid.Row="1" VerticalAlignment="Top" Width="187" Height="55"/>
+            <TextBox Margin="188,214,630,132" FontSize="20"/>
+            <TextBox Margin="782,214,36,132" FontSize="20"/>
         </Grid>
     </Viewbox>
 

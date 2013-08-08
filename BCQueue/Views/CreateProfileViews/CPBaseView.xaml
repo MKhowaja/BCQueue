@@ -21,10 +21,10 @@
                     </Style>
                 </StackPanel.Resources>
                 <Label>Creating Club Profile</Label>
-                <Button Style="{StaticResource CPNavigation}" Command="{Binding CPFirstViewCommand}">General Club Info</Button>
-                <Button Style="{StaticResource CPNavigation}" Command="{Binding CPSecondViewCommand}">Players List</Button>
-                <Button Style="{StaticResource CPNavigation}" Command="{Binding CPThirdViewCommand}">Other Settings</Button>
-            </StackPanel>
+                <Button Style="{StaticResource CPNavigation}" Command="{Binding CPFirstViewCommand}" Height="119">General Club Info</Button>
+            <Button Style="{StaticResource CPNavigation}" Command="{Binding CPSecondViewCommand}" Content="Players List" Height="119"/>
+            <Button Style="{StaticResource CPNavigation}" Command="{Binding CPThirdViewCommand}" Content="Other Settings" Height="119"/>
+        </StackPanel>
         <!--/Viewbox-->
         <ContentControl x:Name ="controlbox" Grid.Column="1" Content="{Binding CurrentCPViewModel}"/>
     </Grid>
