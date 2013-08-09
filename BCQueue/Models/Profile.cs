@@ -9,14 +9,15 @@ namespace BCQueue
     [Serializable]
     public class Profile
     {
-        private Court[] _courts;
-        private ObservableCollection<Member> _members;
+        private ObservableCollection<Court> _courts = new ObservableCollection<Court>();
+        private ObservableCollection<Member> _members = new ObservableCollection<Member>();
 
-        public String Name { get; set; }
+        public String ClubName { get; set; }
         public int NumCourts { get {return NumRows*NumColumns;} } //number of courts in the gym
         public int NumRows { get; set; } 
         public int NumColumns { get; set; }
-        public int timerValue { get; set; } //minutes of play allowed on court
-        
+        public int TimerValue { get; set; } //minutes of play allowed on court
+        public ObservableCollection<Court> Courts { get { return _courts; } }
+        public ObservableCollection<Member> Members { get { return _members; } }
     }
 }

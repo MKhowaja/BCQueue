@@ -18,7 +18,7 @@
                 <RowDefinition Height="0.6*"/>
             </Grid.RowDefinitions>
             <Image Source="/BCQueue;component/Resources/Images/General/Logo/bcqueuelogo3.png" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="40 40 5 5"></Image>
-            <Label Content="Select an option:" Grid.Row="1" FontSize="70" FontFamily="Agency FB" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+            <Label Content="Select an option:" Grid.Row="1" FontSize="70" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
             <Button x:Name="CreateButton" Style="{StaticResource CreateButton}" Grid.Column="0" Grid.Row="2" Margin="100 20 50 20" FontSize="20" Command="{Binding ShowCreateClubInterface}" Cursor="Hand"/>
             <Button x:Name="LoadButton" Style="{StaticResource LoadButton}" Grid.Column="1" Grid.Row="2" Margin="50 20 100 20" FontSize="20" Command="{Binding ShowLoadClubInterface}" Cursor="Hand"/>
         </Grid>

@@ -2,6 +2,13 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:BCQueue;assembly=BCQueue">
     
+    <Style TargetType="Label">
+        <Setter Property="FontFamily" Value="Agency FB"/>
+    </Style>
+    <Style TargetType="TextBox">
+        <Setter Property="FontFamily" Value="Agency FB"/>
+    </Style>
+    
     <Style x:Key="RemoveControlTemplate" TargetType="Button">
         <Setter Property="Template">
             <Setter.Value>

@@ -22,7 +22,8 @@ namespace BCQueue
         {
             InitializeComponent();
         }
-        private void startButtonClicked(object sender, EventArgs e)
+       
+        private void SplashScreenClicked(object sender, MouseButtonEventArgs e)
         {
             MainWindow main = new MainWindow();
             main.Show();

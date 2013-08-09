@@ -9,6 +9,8 @@ namespace BCQueue.ViewModels
 {
     public class MainViewModel: ViewModelBase, INotifyPropertyChanged
     {
+        
+        public Profile MyProfile { get; set; }
 
         private string _homeButtonVisibility;
         public string HomeButtonVisibility { 
@@ -110,6 +112,8 @@ namespace BCQueue.ViewModels
         {
             CurrentViewModel = MainViewModel._startViewModel;
             HomeButtonVisibility = "Collapsed";
+
+            MyProfile = new Profile();
 
             HomeViewCommand = new RelayCommand(() => ExecuteHomeViewCommand());
             MMAboutViewCommand = new RelayCommand(() => ExecuteMMAboutViewCommand());

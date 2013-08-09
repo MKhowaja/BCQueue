@@ -7,13 +7,12 @@
         AllowsTransparency="True"
         WindowStyle="None">
     <Viewbox>
-        <Grid Height="270" Width="500">
+        <Grid Height="270" Width="500" MouseDown="SplashScreenClicked">
             <Grid.Background>
                 <ImageBrush ImageSource="/BCQueue;component/Resources/Images/General/Background/backgroundStretchGray.jpg"/>
             </Grid.Background>
             <Image Source="/BCQueue;component/Resources/Images/General/Logo/bcqueuelogo.png"/>
-            <Button x:Name="startButton" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="500" Opacity="0" Click="startButtonClicked"></Button>
-            <Label FontFamily="Agency FB"  Content="Click anywhere to continue..." Margin="280 210 20 20" FontSize="14"/>
+            <Label Content="Click anywhere to continue..." Margin="280 210 20 20" FontSize="14"/>
         </Grid>
     </Viewbox>
 
