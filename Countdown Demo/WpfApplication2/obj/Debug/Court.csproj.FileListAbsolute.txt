@@ -1,3 +1,0 @@
-c:\users\user\documents\visual studio 2012\Projects\Countdown Demo\WpfApplication2\obj\Debug\Court.csprojResolveAssemblyReference.cache
-c:\users\user\documents\visual studio 2012\Projects\Countdown Demo\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resources.resources
-c:\users\user\documents\visual studio 2012\Projects\Countdown Demo\WpfApplication2\obj\Debug\Court.csproj.GenerateResource.Cache
