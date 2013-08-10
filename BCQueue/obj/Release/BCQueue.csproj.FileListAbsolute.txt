@@ -49,13 +49,7 @@ C:\Users\user\Documents\GitHub\BCQueue\BCQueue\obj\Release\BCQueue.exe
 C:\Users\user\Documents\GitHub\BCQueue\BCQueue\obj\Release\BCQueue.pdb
 C:\Users\user\Documents\GitHub\BCQueue\BCQueue\bin\Release\BCQueue.exe
 C:\Users\user\Documents\GitHub\BCQueue\BCQueue\bin\Release\BCQueue.pdb
-C:\Users\user\Documents\GitHub\BCQueue\BCQueue\bin\Release\System.Windows.Interactivity.dll
-C:\Users\user\Documents\GitHub\BCQueue\BCQueue\bin\Release\Microsoft.Practices.ServiceLocation.dll
 C:\Users\user\Documents\GitHub\BCQueue\BCQueue\bin\Release\GalaSoft.MvvmLight.xml
-C:\Users\user\Documents\GitHub\BCQueue\BCQueue\bin\Release\GalaSoft.MvvmLight.Extras.xml
-C:\Users\user\Documents\GitHub\BCQueue\BCQueue\bin\Release\System.Windows.Interactivity.xml
-C:\Users\user\Documents\GitHub\BCQueue\BCQueue\bin\Release\Microsoft.Practices.ServiceLocation.xml
-C:\Users\user\Documents\GitHub\BCQueue\BCQueue\obj\Release\BCQueue.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\GitHub\BCQueue\BCQueue\obj\Release\Resources\ResourceDictionaries\Styles.baml
 C:\Users\user\Documents\GitHub\BCQueue\BCQueue\obj\Release\MainWindow.baml
 C:\Users\user\Documents\GitHub\BCQueue\BCQueue\obj\Release\Splash.baml
@@ -194,3 +188,6 @@ C:\Users\Clement\Documents\GitHub\BCQueue\BCQueue\obj\Release\BCQueue.csproj.Gen
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMViewPlayerProfileView.baml
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMViewPlayerProfileView.g.cs
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\bin\Release\BCQueue.exe.config
+C:\Users\user\Documents\GitHub\BCQueue\BCQueue\bin\Release\BCQueue.exe.config
+C:\Users\user\Documents\GitHub\BCQueue\BCQueue\obj\Release\Views\CreateProfileViews\CPEditPlayerView.baml
+C:\Users\user\Documents\GitHub\BCQueue\BCQueue\obj\Release\Views\CreateProfileViews\CPEditPlayerView.g.cs

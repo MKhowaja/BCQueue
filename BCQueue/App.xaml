@@ -34,6 +34,9 @@
                     <DataTemplate DataType="{x:Type CPvm:CPThirdViewModel}">
                         <CPv:CPThirdView/>
                     </DataTemplate>
+                    <DataTemplate DataType="{x:Type CPvm:CPEditPlayerViewModel}">
+                        <CPv:CPEditPlayerView/>
+                    </DataTemplate>
                     <DataTemplate DataType="{x:Type CPvm:CPBaseViewModel}">
                         <CPv:CPBaseView/>
                     </DataTemplate>

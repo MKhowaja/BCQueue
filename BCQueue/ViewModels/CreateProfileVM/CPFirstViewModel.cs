@@ -102,6 +102,7 @@ namespace BCQueue.ViewModels.CreateProfileVM
             if (count == 4)
             {
                 (App.Current.Resources["CPLocator"] as CPViewModelLocator).MainView.CurrentCPViewModel = CPBaseViewModel._cPSecondViewModel;
+                count = 0;
             }
         }
         public CPFirstViewModel()
