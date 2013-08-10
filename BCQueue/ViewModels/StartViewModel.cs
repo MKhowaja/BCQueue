@@ -59,11 +59,13 @@ namespace BCQueue.ViewModels
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members.Add(new Member());
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[7].FirstName = "ike";
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[7].LastName = "ma";
+            /*
             for (int i = 8; i < 30; i++)
             {
                 (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members.Add(new Member());
                 (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[i].FirstName = "aae";
             }
+             */
             
             
             
