@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using BCQueue.Resources;
 
 namespace BCQueue.Views.MainMenuViews
 {
@@ -46,7 +47,8 @@ namespace BCQueue.Views.MainMenuViews
                 //not sure if this works yet
                 //remember to implement a proper notification interface for when properties in indiv. members change
             }
-            
+            (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.MyProfile.Members.Sort((x, y) => x.FullName.CompareTo(y.FullName));
+            (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.MyProfile.Members.Sort((y, x) => x.isOnline.CompareTo(y.isOnline));
 
             
         }

@@ -10,9 +10,5 @@ namespace BCQueue.ViewModels.MainMenuVM
         public MMPlayerSignInVM()
         {
         }
-
-        public static void callme()
-        {
-        }
     }
 }
