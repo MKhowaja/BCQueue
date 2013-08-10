@@ -41,13 +41,11 @@ C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Relea
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMConfigureClubProfileView.baml
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMPlayerSignInView.baml
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMViewActiveGamesView.baml
-C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMViewPlayerProfileView.baml
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMAboutView.g.cs
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMAddToQueueView.g.cs
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMConfigureClubProfileView.g.cs
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMPlayerSignInView.g.cs
 C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMViewActiveGamesView.g.cs
-C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMViewPlayerProfileView.g.cs
 C:\Users\user\Documents\GitHub\BCQueue\BCQueue\obj\Release\BCQueue.exe
 C:\Users\user\Documents\GitHub\BCQueue\BCQueue\obj\Release\BCQueue.pdb
 C:\Users\user\Documents\GitHub\BCQueue\BCQueue\bin\Release\BCQueue.exe
@@ -194,3 +192,6 @@ C:\Users\Clement\Documents\GitHub\BCQueue\BCQueue\obj\Release\App.baml
 C:\Users\Clement\Documents\GitHub\BCQueue\BCQueue\obj\Release\BCQueue.g.resources
 C:\Users\Clement\Documents\GitHub\BCQueue\BCQueue\obj\Release\BCQueue.Properties.Resources.resources
 C:\Users\Clement\Documents\GitHub\BCQueue\BCQueue\obj\Release\BCQueue.csproj.GenerateResource.Cache
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMViewPlayerProfileView.baml
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\obj\Release\Views\MainMenuViews\MMViewPlayerProfileView.g.cs
+C:\Users\Clement\Documents\Visual Studio 2012\Projects\BCQueue\BCQueue\bin\Release\BCQueue.exe.config

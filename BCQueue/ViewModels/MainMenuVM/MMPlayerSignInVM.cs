@@ -7,5 +7,12 @@ namespace BCQueue.ViewModels.MainMenuVM
 {
     public class MMPlayerSignInVM:ViewModelBase
     {
+        public MMPlayerSignInVM()
+        {
+        }
+
+        public static void callme()
+        {
+        }
     }
 }

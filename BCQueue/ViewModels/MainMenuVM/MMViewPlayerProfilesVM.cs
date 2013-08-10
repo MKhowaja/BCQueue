@@ -92,14 +92,8 @@ namespace BCQueue.ViewModels.MainMenuVM
         }
         #endregion
 
-        public MMViewPlayerProfilesVM()
+        public void localCleanUp()
         {
-            SearchMembersCommand = new RelayCommand(() => ExecuteSearchMembersCommand());
-        }
-        public ICommand SearchMembersCommand { get; private set; }
-        public void ExecuteSearchMembersCommand() //yet to implement support for multiple members with the same name
-        {
-            #region Clean-up
             GenderLabelText = "";
             SkillLevelLabelText = "";
             PreferredDisciplineLabelText = "";
@@ -107,8 +101,20 @@ namespace BCQueue.ViewModels.MainMenuVM
             GamesLostLabelText = "";
             TotalGamesLabelText = "";
             AboutMeText = "";
-            #endregion
-
+        }
+        public void RTHCleanUp()
+        {
+            localCleanUp();
+            NameBoxText = "";
+        }
+        public MMViewPlayerProfilesVM()
+        {
+            SearchMembersCommand = new RelayCommand(() => ExecuteSearchMembersCommand());
+        }
+        public ICommand SearchMembersCommand { get; private set; }
+        public void ExecuteSearchMembersCommand() //yet to implement support for multiple members with the same name
+        {
+            localCleanUp();
             for (int i = 0; i < (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.MyProfile.Members.Count; i++)
             {
                 if ((App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.MyProfile.Members[i].FullName.Equals(NameBoxText))

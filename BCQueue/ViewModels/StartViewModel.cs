@@ -16,7 +16,7 @@ namespace BCQueue.ViewModels
         public ICommand ShowCreateClubInterface { get; private set; }
         public ICommand ShowLoadClubInterface { get; private set; }
 
-        private static void CreateClubInterfaceExecute()
+        private void CreateClubInterfaceExecute()
         {
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.CurrentViewModel = MainViewModel._cPBaseViewModel;
         }
@@ -27,6 +27,7 @@ namespace BCQueue.ViewModels
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.CurrentViewModel = MainViewModel._homeViewModel;
 
             //Temporary for testing purposes
+            
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.ClubName = "TFSS Club";
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.NumRows = 2;
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.NumColumns = 3;
@@ -43,6 +44,27 @@ namespace BCQueue.ViewModels
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members.Add(new Member());
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[2].FirstName = "Joshua";
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[2].LastName = "Fontana";
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members.Add(new Member());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[3].FirstName = "Joshua";
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[3].LastName = "Dude";
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members.Add(new Member());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[4].FirstName = "Aniket";
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[4].LastName = "Verma";
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members.Add(new Member());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[5].FirstName = "Aiket";
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[5].LastName = "Vera";
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members.Add(new Member());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[6].FirstName = "iket";
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[6].LastName = "Ver";
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members.Add(new Member());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[7].FirstName = "ike";
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[7].LastName = "ma";
+            for (int i = 8; i < 30; i++)
+            {
+                (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members.Add(new Member());
+                (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[i].FirstName = "aae";
+            }
+            
             
             
         }

@@ -3,6 +3,7 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using System.Windows;
 using System.ComponentModel;
+using System.Collections.ObjectModel;
 
 
 namespace BCQueue.ViewModels
@@ -10,9 +11,10 @@ namespace BCQueue.ViewModels
     public class MainViewModel: ViewModelBase, INotifyPropertyChanged
     {
         
-        public Profile MyProfile { get; set; }
+        public Profile MyProfile { get; set; } 
+        public ObservableCollection<Member> OnlineMembers { get; set; } //holds the members that are currently online (displayed in the SignInView)
 
-        private string _homeButtonVisibility;
+        private string _homeButtonVisibility; //property for the visibility of the Home Button that can be found in MainWindow.xaml
         public string HomeButtonVisibility { 
             get { return _homeButtonVisibility; } 
             set 
@@ -73,6 +75,7 @@ namespace BCQueue.ViewModels
         private void ExecuteHomeViewCommand()
         {
             CurrentViewModel = MainViewModel._homeViewModel;
+            _mMViewPlayerProfilesVM.RTHCleanUp(); //cleans up labels in the profileviewer upon exit
             HomeButtonVisibility = "Collapsed";
         }
         private void ExecuteMMAboutViewCommand()
@@ -110,10 +113,12 @@ namespace BCQueue.ViewModels
 
         public MainViewModel()
         {
-            CurrentViewModel = MainViewModel._startViewModel;
-            HomeButtonVisibility = "Collapsed";
+            CurrentViewModel = MainViewModel._startViewModel; //begins program with the StartViewModel
+            HomeButtonVisibility = "Collapsed"; //initially hidden home button
 
+            //creates new instances of the following public properties
             MyProfile = new Profile();
+            OnlineMembers = new ObservableCollection<Member>();
 
             HomeViewCommand = new RelayCommand(() => ExecuteHomeViewCommand());
             MMAboutViewCommand = new RelayCommand(() => ExecuteMMAboutViewCommand());

@@ -16,7 +16,8 @@ namespace BCQueue
         private pd _preferredDiscipline;
         private sl _skillLevel;
         private gend _gender;
-        public String AboutMe { get; set; }
+        public bool isOnline { get; set; } 
+        public String AboutMe { get; set; } //TODO: Find a better data type to support this
         public int GamesWon { get; set; }
         public int GamesLost { get; set; }
         public int TotalGames { get { return GamesLost + GamesWon; } }
@@ -45,7 +46,6 @@ namespace BCQueue
                     _skillLevel = value;
             }
         }
-
         public gend Gender
         {
             get { return _gender; }
