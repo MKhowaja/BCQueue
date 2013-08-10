@@ -10,7 +10,8 @@ namespace BCQueue.ViewModels
 {
     public class MainViewModel: ViewModelBase, INotifyPropertyChanged
     {
-        
+        public Profile Profile { get; set; }
+
         public Profile MyProfile { get; set; } 
         public ObservableCollection<Member> OnlineMembers { get; set; } //holds the members that are currently online (displayed in the SignInView)
 
@@ -116,6 +117,7 @@ namespace BCQueue.ViewModels
             CurrentViewModel = MainViewModel._startViewModel; //begins program with the StartViewModel
             HomeButtonVisibility = "Collapsed"; //initially hidden home button
 
+            Profile = new Profile();
             //creates new instances of the following public properties
             MyProfile = new Profile();
             OnlineMembers = new ObservableCollection<Member>();

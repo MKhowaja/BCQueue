@@ -22,7 +22,7 @@
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Button Style="{StaticResource MemberSignInOutButton}" Tag="{Binding}" Content="{Binding FullName}" Click="MemberClicked"
-                                    Background="{DynamicResource offline}">
+                                    Background="{DynamicResource offline}" Loaded="Button_Loaded">
                                 <Button.Resources>
                                     <ImageBrush x:Key="offline" 
     ImageSource="/BCQueue;component/Resources/Images/General/Status/offline.png"/>

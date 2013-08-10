@@ -5,11 +5,40 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="768" d:DesignWidth="1024">
+    
     <Viewbox Height="768" Width="1024" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Grid Height="768" Width="1024">
-            <Label Content="CPSecondView" FontSize="60" HorizontalAlignment="Left" Margin="330,356,0,0" VerticalAlignment="Top" Height="110" Width="450"/>
-            <Button Content="Next" Command="{Binding CPNextPageCommand}" HorizontalAlignment="Left" Margin="762,713,0,0" VerticalAlignment="Top" Width="187" Height="55"/>
-            <Button Content="Back" Command="{Binding CPPreviousPageCommand}" HorizontalAlignment="Left" Margin="513,713,0,0" VerticalAlignment="Top" Width="187" Height="55"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="0.7*"/>
+            </Grid.RowDefinitions>
+            <ScrollViewer Grid.Row="1" Background="White" Margin="15">
+                <!--Note: DataContext set in code-behind-->
+                <ItemsControl x:Name="MembersSignInListx" ItemsSource="{Binding}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid IsItemsHost="True" Columns="9" VerticalAlignment="Top"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Style="{StaticResource MemberSignInOutButton}" Tag="{Binding}" Content="{Binding FullName}" Click="MemberClicked"
+                                    Background="{DynamicResource offline}">
+                                <Button.Resources>
+                                    <ImageBrush x:Key="offline" 
+    ImageSource="/BCQueue;component/Resources/Images/General/Status/offline.png"/>
+                                    <ImageBrush x:Key="online" 
+    ImageSource="/BCQueue;component/Resources/Images/General/Status/online.png"/>
+                                </Button.Resources>
+                            </Button>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+            <Button Content="Create Player" HorizontalAlignment="Left" Margin="141,76,0,0" VerticalAlignment="Top" Width="228" Height="67"/>
+            <Button Content="Edit Player" HorizontalAlignment="Left" Margin="438,76,0,0" VerticalAlignment="Top" Width="228" Height="67"/>
+            <Button Content="Remove Player" HorizontalAlignment="Left" Margin="744,76,0,0" VerticalAlignment="Top" Width="228" Height="67"/>
+
         </Grid>
     </Viewbox>
 </UserControl>

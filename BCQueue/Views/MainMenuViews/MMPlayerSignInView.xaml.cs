@@ -52,5 +52,18 @@ namespace BCQueue.Views.MainMenuViews
 
             
         }
+
+        private void Button_Loaded(object sender, EventArgs e)
+        {
+            Member m = ((Button)sender).Tag as Member;
+            if (m.isOnline == false)
+            {
+                ((Button)sender).SetResourceReference(Button.BackgroundProperty, "offline");
+            }
+            else
+            {
+                ((Button)sender).SetResourceReference(Button.BackgroundProperty, "online");
+            }
+        }
     }
 }

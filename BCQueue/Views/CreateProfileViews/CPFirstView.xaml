@@ -12,17 +12,20 @@
                 <RowDefinition Height="384"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label Content="Name of Club:" Grid.Row="0" FontSize="22" FontWeight="Bold" Margin="0,10,871,330"/>
-            <Label Content="Number of Courts" Grid.Row="0" FontSize="22" Margin="0,177,811,162" FontWeight="Bold"/>
-            <Label Content="Number of Columns:" Grid.Row="0" FontSize="22" Margin="542,260,55,77" FontWeight="Bold"/>
-            <Label Content="Number of Rows:" Grid.Row="0" FontSize="22" Margin="0,260,630,77" FontWeight="Bold"/>
-            <TextBox Margin="0,80,551,262" FontSize="20"/>
+            <Label Content="Name of Club:" Grid.Row="0" FontSize="22" FontWeight="Bold" Margin="-5,10,876,330"/>
+            <Label Content="Number of Courts" Grid.Row="0" FontSize="22" Margin="-5,175,816,164" FontWeight="Bold"/>
+            <Label Content="Number of Columns:" Grid.Row="0" FontSize="22" Margin="425,260,172,77" FontWeight="Bold"/>
+            <Label Content="Number of Rows:" Grid.Row="0" FontSize="22" Margin="-5,260,635,77" FontWeight="Bold"/>
+            <Label Content="Time Allowed to Play on Court:" Grid.Row="1" FontSize="22" Margin="-5,47,687,293" FontWeight="Bold"/>
+            <Label Content="min" Grid.Row="1" FontSize="22" Margin="370,50,590,290" FontWeight="Bold"/>
+
+            <TextBox Style="{StaticResource style1}" Margin="0,80,551,262" Text="{Binding ClubNameText, UpdateSourceTrigger=PropertyChanged, Delay=300}"/>
+            <TextBox Style="{StaticResource style1}" Margin="151,260,776,83" Text="{Binding NumRowsText, UpdateSourceTrigger=PropertyChanged, Delay=300}"/>
+            <TextBox Style="{StaticResource style1}" Margin="604,260,332,83" Text="{Binding NumColumnsText, UpdateSourceTrigger=PropertyChanged, Delay=300}"/>
+            <TextBox Style="{StaticResource style1}" Margin="251,50,676,293" Grid.Row="1" Text="{Binding TimerValueText, UpdateSourceTrigger=PropertyChanged, Delay=300}"/>
+            
             <Button Content="Next" Command="{Binding CPNextPageCommand}" HorizontalAlignment="Left" Margin="762,329,0,0" Grid.Row="1" VerticalAlignment="Top" Width="187" Height="55"/>
-            <TextBox Margin="213,260,605,83" FontSize="20"/>
-            <TextBox Margin="785,260,33,83" FontSize="20"/>
-            <Label Content="Time Allowed to Play on Court:" Grid.Row="1" FontSize="22" Margin="0,47,682,293" FontWeight="Bold"/>
-            <TextBox Margin="371,50,447,293" FontSize="20" Grid.Row="1"/>
-            <Label Content="min" Grid.Row="1" FontSize="22" Margin="607,47,353,293" FontWeight="Bold"/>
+            
         </Grid>
     </Viewbox>
 

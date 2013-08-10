@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace BCQueue.Views.CreateProfileViews
 {
@@ -22,6 +23,28 @@ namespace BCQueue.Views.CreateProfileViews
         public CPSecondView()
         {
             InitializeComponent();
+            if ((App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.MyProfile.Members != null)
+                MembersSignInListx.DataContext = (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.MyProfile.Members;
+        }
+        private void MemberClicked(object sender, EventArgs e)
+        {
+            Member m = ((Button)sender).Tag as Member;
+            if (m.isOnline == false)
+            {
+                ((Button)sender).SetResourceReference(Button.BackgroundProperty, "online");
+                m.isOnline = true;
+                //note: adds member to the OnlineMembers collection after isOnline is set to true
+                (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.OnlineMembers.Add(m);
+            }
+            else
+            {
+                ((Button)sender).SetResourceReference(Button.BackgroundProperty, "offline");
+                //note: removes member from OnlineMembers collection before isOnline is set to false
+                (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.OnlineMembers.Remove(m);
+                m.isOnline = false;
+                //not sure if this works yet
+                //remember to implement a proper notification interface for when properties in indiv. members change
+            }
         }
     }
 }
