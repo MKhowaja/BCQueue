@@ -14,7 +14,7 @@ namespace BCQueue
 
         public string ClubName { get; set; }
         public int NumCourts { get {return NumRows*NumColumns;} } //number of courts in the gym
-        public int NumRows { get; set; } 
+        public int NumRows { get; set; }  //keep columns<rows for optimal visuals
         public int NumColumns { get; set; }
         public int TimerValue { get; set; } //minutes of play allowed on court
         public ObservableCollection<Court> Courts { get { return _courts; } }

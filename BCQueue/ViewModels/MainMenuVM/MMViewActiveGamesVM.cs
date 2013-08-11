@@ -7,5 +7,6 @@ namespace BCQueue.ViewModels.MainMenuVM
 {
     public class MMViewActiveGamesVM:ViewModelBase
     {
+
     }
 }

@@ -32,8 +32,6 @@ namespace BCQueue.ViewModels
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.NumRows = 2;
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.NumColumns = 3;
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.TimerValue = 20;
-            for (int i = 0; i < 6; i++)
-                (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Courts.Add(new Court());
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members.Add(new Member());
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[0].FirstName = "Clement";
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[0].LastName = "Hoang";
@@ -66,7 +64,22 @@ namespace BCQueue.ViewModels
                 (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[i].FirstName = "aae";
             }
              */
-            
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Courts.Add(new Court());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Courts.Add(new Court());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Courts.Add(new Court());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Courts.Add(new Court());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Courts.Add(new Court());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Courts.Add(new Court());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Courts.Add(new Court());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Courts.Add(new Court());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Courts.Add(new Court());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Courts.Add(new Court());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Courts.Add(new Court());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Courts.Add(new Court());
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Courts.Add(new Court());
+
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.NumColumns = 5;
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.NumRows = 3;
             
             
         }

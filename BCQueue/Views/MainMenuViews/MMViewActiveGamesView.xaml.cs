@@ -22,6 +22,16 @@ namespace BCQueue.Views.MainMenuViews
         public MMViewActiveGamesView()
         {
             InitializeComponent();
+            if ((App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.MyProfile != null)
+                CourtsControl.DataContext = (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.MyProfile;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(sender.GetType().ToString());
+            MessageBox.Show(((FrameworkElement)sender).Parent.GetType().ToString());
+            //Call method here
+            //give the button a better name...
         }
     }
 }
