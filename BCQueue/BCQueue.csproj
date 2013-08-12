@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Images\General\Icon\icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="GalaSoft.MvvmLight, Version=4.1.24.16215, Culture=neutral, PublicKeyToken=3e875cdb3903c512, processorArchitecture=MSIL" />
     <Reference Include="GalaSoft.MvvmLight.Extras, Version=4.1.24.16215, Culture=neutral, PublicKeyToken=48c5515dce1bf64d, processorArchitecture=MSIL" />
@@ -247,6 +250,9 @@
     <Resource Include="Resources\Images\Main Menu\Player Sign-In.png" />
     <Resource Include="Resources\Images\Main Menu\View Active Games.png" />
     <Resource Include="Resources\Images\Main Menu\View Player Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\General\Icon\icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

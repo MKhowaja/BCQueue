@@ -12,13 +12,19 @@
                 <ColumnDefinition Width="4*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <ScrollViewer Height="614" Width="1093" Background="White" HorizontalScrollBarVisibility="Visible" 
-                      HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.8*"/>
+            </Grid.RowDefinitions>
+            <ScrollViewer Height="614" MaxWidth="1093" Background="White" HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto"
+                      HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                      Grid.Row="1" Grid.Column="0">
                 <Grid>
-                    <ItemsControl x:Name="CourtsControl" ItemsSource="{Binding Path=Courts}">
+                    <ItemsControl x:Name="CourtsControl" ItemsSource="{Binding Courts}">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
-                                <UniformGrid IsItemsHost="True" Columns="{Binding Path=NumColumns}" Rows="{Binding Path=NumRows}"/>
+                                <UniformGrid IsItemsHost="True" Columns="{Binding NumColumns}" Rows="{Binding NumRows}"/>
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.ItemTemplate>
@@ -28,18 +34,19 @@
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="5*"/>
                                             <RowDefinition Height="4*"/>
-                                            <RowDefinition Height="2*"/>
+                                            <RowDefinition Height="3*"/>
+                                            <RowDefinition Height="3*"/>
                                         </Grid.RowDefinitions>
-                                        <Label Grid.Row="0" Content="Court 1" HorizontalAlignment="Center"
+                                        <Label Grid.Row="0" Content="{Binding CourtNumber}" HorizontalAlignment="Center"
                                            VerticalAlignment="Center" FontSize="48"/>
-                                        <TextBlock Grid.Row="1" Text="00:20:00" Background="White" 
+                                        <TextBlock Grid.Row="2" Text="00:20:00" Background="White" 
                                                HorizontalAlignment="Center" FontSize="36"
                                                VerticalAlignment="Center" Padding="10 0 10 0"/>
-                                        <Button Style="{StaticResource timerButton}" Grid.Row="2" Content="Finish"
+                                        <Button Style="{StaticResource timerButton}" Grid.Row="3" Content="Finish"
                                             VerticalAlignment="Center" FontSize="36"
                                             Background="Gray" Width="{Binding ElementName=CourtControl, Path=ActualWidth}"
                                             Click="Button_Click" HorizontalAlignment="Center"/>
-                                        <Border Grid.RowSpan="3" BorderBrush="White" BorderThickness="1 0 0 0"/>
+                                        <Border Grid.RowSpan="4" BorderBrush="White" BorderThickness="1 0 0 0"/>
 
                                     </Grid>
                                 </UserControl>

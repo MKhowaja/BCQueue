@@ -16,22 +16,21 @@ namespace BCQueue.ViewModels.MainMenuVM
         public static void SignInOutExecute(Button sender)
         {
             Member m = ((Button)sender).Tag as Member;
+            //Changes visual display, sets the model's isOnline property correspondingly, then adds the Member to 
+            //an Observable Collection of Online Members
             if (m.isOnline == false)
             {
                 ((Button)sender).SetResourceReference(Button.BackgroundProperty, "online");
                 m.isOnline = true;
-                //note: adds member to the OnlineMembers collection after isOnline is set to true
                 (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.OnlineMembers.Add(m);
             }
             else
             {
                 ((Button)sender).SetResourceReference(Button.BackgroundProperty, "offline");
-                //note: removes member from OnlineMembers collection before isOnline is set to false
                 (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.OnlineMembers.Remove(m);
                 m.isOnline = false;
-                //not sure if this works yet
-                //remember to implement a proper notification interface for when properties in indiv. members change
             }
+            //Uses an extension method Sort to sort the ObservableCollection by name and online status (online members preceding, and alphabetical order)
             (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.MyProfile.Members.Sort((x, y) => x.FullName.CompareTo(y.FullName));
             (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.MyProfile.Members.Sort((y, x) => x.isOnline.CompareTo(y.isOnline));
         }
