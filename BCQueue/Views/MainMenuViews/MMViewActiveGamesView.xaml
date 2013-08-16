@@ -21,42 +21,17 @@
                       HorizontalAlignment="Center" VerticalAlignment="Bottom"
                       Grid.Row="1" Grid.Column="0">
                 <Grid>
-                    <ItemsControl x:Name="CourtsControl" ItemsSource="{Binding Courts}">
+                    <ItemsControl x:Name="CourtsControl" ItemsSource="{Binding Courts}" ItemTemplate="{StaticResource CourtControlTemplate}">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <UniformGrid IsItemsHost="True" Columns="{Binding NumColumns}" Rows="{Binding NumRows}"/>
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <UserControl Width="300" Height="300" Background="#CADEE3" x:Name="CourtControl">
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="5*"/>
-                                            <RowDefinition Height="4*"/>
-                                            <RowDefinition Height="3*"/>
-                                            <RowDefinition Height="3*"/>
-                                        </Grid.RowDefinitions>
-                                        <Label Grid.Row="0" Content="{Binding CourtNumber}" HorizontalAlignment="Center"
-                                           VerticalAlignment="Center" FontSize="48"/>
-                                        <TextBlock Grid.Row="2" Text="00:20:00" Background="White" 
-                                               HorizontalAlignment="Center" FontSize="36"
-                                               VerticalAlignment="Center" Padding="10 0 10 0"/>
-                                        <Button Style="{StaticResource timerButton}" Grid.Row="3" Content="Finish"
-                                            VerticalAlignment="Center" FontSize="36"
-                                            Background="Gray" Width="{Binding ElementName=CourtControl, Path=ActualWidth}"
-                                            Click="Button_Click" HorizontalAlignment="Center"/>
-                                        <Border Grid.RowSpan="4" BorderBrush="White" BorderThickness="1 0 0 0"/>
-
-                                    </Grid>
-                                </UserControl>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
+                        
                     </ItemsControl>
                 </Grid>
             </ScrollViewer>
             <Label Grid.Column="1" Content="Queue" FontSize="40"/>
-            <!--Make pressable-->
         </Grid>
     </Viewbox>
 </UserControl>

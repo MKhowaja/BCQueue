@@ -22,12 +22,12 @@ namespace BCQueue.ViewModels.MainMenuVM
             {
                 ((Button)sender).SetResourceReference(Button.BackgroundProperty, "online");
                 m.isOnline = true;
-                (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.OnlineMembers.Add(m);
+                (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.OnlinePool.Add(m);
             }
             else
             {
                 ((Button)sender).SetResourceReference(Button.BackgroundProperty, "offline");
-                (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.OnlineMembers.Remove(m);
+                (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.OnlinePool.Remove(m);
                 m.isOnline = false;
             }
             //Uses an extension method Sort to sort the ObservableCollection by name and online status (online members preceding, and alphabetical order)

@@ -10,10 +10,11 @@ namespace BCQueue.ViewModels
 {
     public class MainViewModel: ViewModelBase, INotifyPropertyChanged
     {
-        public Profile Profile { get; set; }
+        public Profile Profile { get; set; }//temp for moose
 
         public Profile MyProfile { get; set; } 
-        public ObservableCollection<Member> OnlineMembers { get; set; } //holds the members that are currently online (displayed in the SignInView)
+        public ObservableCollection<Member> OnlinePool { get; set; } //holds the members that are currently online (displayed in the SignInView)
+        public ObservableCollection<Member> AvailablePool { get; set; } //holds the members that are currently not in an active game nor waiting in the queue
 
         private string _homeButtonVisibility; //property for the visibility of the Home Button that can be found in MainWindow.xaml
         public string HomeButtonVisibility { 
@@ -117,10 +118,12 @@ namespace BCQueue.ViewModels
             CurrentViewModel = MainViewModel._startViewModel; //begins program with the StartViewModel
             HomeButtonVisibility = "Collapsed"; //initially hidden home button
 
-            Profile = new Profile();
+            Profile = new Profile();//temp for moose
+
             //creates new instances of the following public properties
             MyProfile = new Profile();
-            OnlineMembers = new ObservableCollection<Member>();
+            OnlinePool = new ObservableCollection<Member>();
+            AvailablePool = new ObservableCollection<Member>();
 
             HomeViewCommand = new RelayCommand(() => ExecuteHomeViewCommand());
             MMAboutViewCommand = new RelayCommand(() => ExecuteMMAboutViewCommand());

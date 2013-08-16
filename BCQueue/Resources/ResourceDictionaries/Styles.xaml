@@ -128,6 +128,7 @@
         </Setter>
     </Style>
 
+    <!--style for validation purposes in the CP Views-->
     <Style TargetType="{x:Type TextBox}" x:Key="style1">
         <Setter Property="Validation.ErrorTemplate">
             <Setter.Value>
@@ -149,6 +150,7 @@
         <Setter Property="FontFamily" Value="Sergoe UI"/>
     </Style>
 
+    
     <Style x:Key="timerButton" TargetType="Button">
         <Setter Property="Template">
             <Setter.Value>
@@ -160,5 +162,40 @@
             </Setter.Value>
         </Setter>
         <Setter Property="Cursor" Value="Hand"/>
+    </Style>
+    
+    <!--Data Template for the Courts in ViewActiveGamesView.xaml-->
+    <DataTemplate x:Key="CourtControlTemplate">
+        <UserControl Width="300" Height="300" Background="#CADEE3" x:Name="CourtControl">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Content="{Binding CourtNumber}" HorizontalAlignment="Center"
+                                           VerticalAlignment="Center" FontSize="48"/>
+                <TextBlock Grid.Row="2" Text="00:20:00" Background="White" 
+                                               HorizontalAlignment="Center" FontSize="36"
+                                               VerticalAlignment="Center" Padding="10 0 10 0"/>
+                <Button Style="{StaticResource timerButton}" Grid.Row="3" Content="Finish"
+                                            VerticalAlignment="Center" FontSize="36"
+                                            Background="Gray" Width="{Binding ElementName=CourtControl, Path=ActualWidth}"
+                                            HorizontalAlignment="Center"/>
+                <Border Grid.RowSpan="4" BorderBrush="White" BorderThickness="1 0 0 0"/>
+            </Grid>
+        </UserControl>
+    </DataTemplate>
+
+    <!--For use in the AddToQueue.xaml-->
+    <Style TargetType="UserControl" x:Key="AvailableForDragInto">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle StrokeDashArray="4" Stroke="Black" StrokeThickness="2" RadiusX="10" RadiusY="10" Height="75" Width="300"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 </ResourceDictionary>
