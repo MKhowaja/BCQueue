@@ -24,6 +24,7 @@ namespace BCQueue
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string FullName { get { return FirstName+" "+LastName; } }
+
         public pd PreferredDiscipline
         {
             get { return _preferredDiscipline; }

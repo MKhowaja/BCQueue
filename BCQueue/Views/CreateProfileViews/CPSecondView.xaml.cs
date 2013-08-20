@@ -20,6 +20,7 @@ namespace BCQueue.Views.CreateProfileViews
     /// </summary>
     public partial class CPSecondView : UserControl
     {
+        public String something;
         public CPSecondView()
         {
             InitializeComponent();
@@ -29,6 +30,23 @@ namespace BCQueue.Views.CreateProfileViews
         {
             if ((App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.MyProfile.Members != null)
                 MembersSignInListx.DataContext = (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.MyProfile.Members;
+        }
+        private void MemberClicked(object sender, EventArgs e)
+        {
+            BCQueue.ViewModels.MainMenuVM.MMPlayerSignInVM.SignInOutExecute((Button)sender);
+        }
+
+        private void Button_Initialized(object sender, EventArgs e)
+        {
+            Member m = ((Button)sender).Tag as Member;
+            if (m.isOnline == false)
+            {
+                ((Button)sender).SetResourceReference(Button.BackgroundProperty, "Deselected");
+            }
+            else
+            {
+                ((Button)sender).SetResourceReference(Button.BackgroundProperty, "Selected");
+            }
         }
 
 

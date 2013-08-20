@@ -19,15 +19,12 @@ namespace BCQueue.ViewModels
         private void CreateClubInterfaceExecute()
         {
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.CurrentViewModel = MainViewModel._cPBaseViewModel;
+            temp();
+
         }
 
-
-        private static void LoadClubInterfaceExecute()
+        public static void temp()
         {
-            (App.Current.Resources["Locator"] as ViewModelLocator).Main.CurrentViewModel = MainViewModel._homeViewModel;
-
-            //Temporary for testing purposes
-            
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.ClubName = "TFSS Club";
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.NumRows = 2;
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.NumColumns = 3;
@@ -57,13 +54,22 @@ namespace BCQueue.ViewModels
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members.Add(new Member());
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[7].FirstName = "ike";
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Members[7].LastName = "ma";
-            
+
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.NumColumns = 3;
             (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.NumRows = 3;
             for (int i = 1; i <= (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.NumCourts; i++)
             {
                 (App.Current.Resources["Locator"] as ViewModelLocator).Main.MyProfile.Courts.Add(new Court(i));
             }
+        }
+
+        private static void LoadClubInterfaceExecute()
+        {
+            (App.Current.Resources["Locator"] as ViewModelLocator).Main.CurrentViewModel = MainViewModel._homeViewModel;
+
+            //Temporary for testing purposes
+
+            temp();
              
             //End temp
 

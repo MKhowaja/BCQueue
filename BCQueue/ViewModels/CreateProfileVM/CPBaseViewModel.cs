@@ -14,7 +14,7 @@ namespace BCQueue.ViewModels.CreateProfileVM
         public readonly static CreateProfileVM.CPFirstViewModel _cPFirstViewModel = new CreateProfileVM.CPFirstViewModel();
         public readonly static CreateProfileVM.CPSecondViewModel _cPSecondViewModel = new CreateProfileVM.CPSecondViewModel();
         public readonly static CreateProfileVM.CPThirdViewModel _cPThirdViewModel = new CreateProfileVM.CPThirdViewModel();
-        public readonly static CreateProfileVM.CPEditPlayerViewModel _cPEditPlayerModel = new CreateProfileVM.CPEditPlayerViewModel();
+        public readonly static CreateProfileVM.CPEditPlayerViewModel _cPEditPlayerViewModel = new CreateProfileVM.CPEditPlayerViewModel();
         #endregion
 
         public ViewModelBase CurrentCPViewModel
@@ -35,6 +35,7 @@ namespace BCQueue.ViewModels.CreateProfileVM
         public ICommand CPFirstViewCommand { get; private set; }
         public ICommand CPSecondViewCommand { get; private set; }
         public ICommand CPThirdViewCommand { get; private set; }
+        public ICommand CPEditPlayerViewCommand { get; private set; }
 
         private static void ExecuteCPFirstViewCommand()
         {
@@ -48,6 +49,10 @@ namespace BCQueue.ViewModels.CreateProfileVM
         {
             (App.Current.Resources["CPLocator"] as CPViewModelLocator).MainView.CurrentCPViewModel = CPBaseViewModel._cPThirdViewModel;
         }
+        private static void ExecuteCPEditPlayerViewCommand()
+        {
+            (App.Current.Resources["CPLocator"] as CPViewModelLocator).MainView.CurrentCPViewModel = CPBaseViewModel._cPEditPlayerViewModel;
+        }
 
         public CPBaseViewModel()
         {
@@ -55,6 +60,7 @@ namespace BCQueue.ViewModels.CreateProfileVM
             CPFirstViewCommand = new RelayCommand(() => ExecuteCPFirstViewCommand());
             CPSecondViewCommand = new RelayCommand(() => ExecuteCPSecondViewCommand());
             CPThirdViewCommand = new RelayCommand(() => ExecuteCPThirdViewCommand());
+            CPEditPlayerViewCommand = new RelayCommand(() => ExecuteCPEditPlayerViewCommand());
         }
     }
 }
