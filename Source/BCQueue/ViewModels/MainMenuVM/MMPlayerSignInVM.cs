@@ -12,7 +12,11 @@ namespace BCQueue.ViewModels.MainMenuVM
         public MMPlayerSignInVM()
         {
         }
-        //A parameter of type button is passed through a Click Event in code-behind that calls this method
+
+        /// <summary>
+        /// Determines whether the displayed member should sign in or out, then follows up with the corresponding actions
+        /// </summary>
+        /// <param name="sender">A parameter of type button is passed through a Click Event in code-behind that calls this method</param>
         public static void SignInOutExecute(Button sender)
         {
             Member m = ((Button)sender).Tag as Member;
@@ -20,19 +24,30 @@ namespace BCQueue.ViewModels.MainMenuVM
             //an Observable Collection of Online Members
             if (m.isOnline == false)
             {
-                ((Button)sender).SetResourceReference(Button.BackgroundProperty, "online");
+                ((Button)sender).SetResourceReference(Button.BackgroundProperty, "online"); //sets appropriate avatar
                 m.isOnline = true;
-                (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.OnlinePool.Add(m);
+                m.isBusy = false; //just in case
+                (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.OnlinePool.Add(m); 
+                MainViewModel._mMAddToQueueVM.AvailablePool.Add(m);
             }
             else
             {
-                ((Button)sender).SetResourceReference(Button.BackgroundProperty, "offline");
-                (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.OnlinePool.Remove(m);
-                m.isOnline = false;
+                if (m.isBusy == false)
+                {
+                    ((Button)sender).SetResourceReference(Button.BackgroundProperty, "offline"); //sets appropriate avatar
+                    (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.OnlinePool.Remove(m);
+                    m.isOnline = false;
+                    MainViewModel._mMAddToQueueVM.AvailablePool.Remove(m);
+                    //Uses an extension method Sort to sort the ObservableCollection by name and online status (online members preceding, and alphabetical order)
+                }
+                else
+                {
+                    MessageBox.Show("busy!");
+                }
             }
-            //Uses an extension method Sort to sort the ObservableCollection by name and online status (online members preceding, and alphabetical order)
             (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.MyProfile.Members.Sort((x, y) => x.FullName.CompareTo(y.FullName));
             (App.Current.Resources["Locator"] as BCQueue.ViewModels.ViewModelLocator).Main.MyProfile.Members.Sort((y, x) => x.isOnline.CompareTo(y.isOnline));
+            
         }
     }
 }

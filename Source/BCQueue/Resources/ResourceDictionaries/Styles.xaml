@@ -282,10 +282,10 @@
 
 
     <ItemsPanelTemplate x:Key="WrapPanelTemplate">
-        <WrapPanel HorizontalAlignment="Center"/>
+        <WrapPanel/>
     </ItemsPanelTemplate>
     <ItemsPanelTemplate x:Key="StackPanelTemplate">
-        <StackPanel HorizontalAlignment="Center"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </ItemsPanelTemplate>
     
     <Style TargetType="Button" x:Key="AddButton" BasedOn="{StaticResource RemoveControlTemplate}">
@@ -295,6 +295,7 @@
             </Setter.Value>
         </Setter>
         <Setter Property="Margin" Value="70 40 70 20"/>
+        <Setter Property="Cursor" Value="Hand"/>
     </Style>
     <!--End: For use in the AddToQueue.xaml-->
 </ResourceDictionary>

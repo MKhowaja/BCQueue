@@ -6,6 +6,9 @@ using System.Collections.ObjectModel;
 
 namespace BCQueue
 {
+    /// <summary>
+    /// A class that stores collections of courts, members, and settings specfic to a specific badminton club
+    /// </summary>
     [Serializable]
     public class Profile
     {

@@ -14,7 +14,7 @@ namespace BCQueue.ViewModels
 
         public Profile MyProfile { get; set; } 
         public ObservableCollection<Member> OnlinePool { get; set; } //holds the members that are currently online (displayed in the SignInView)
-        public ObservableCollection<Member> AvailablePool { get; set; } //holds the members that are currently not in an active game nor waiting in the queue
+        
 
         private string _homeButtonVisibility; //property for the visibility of the Home Button that can be found in MainWindow.xaml
         public string HomeButtonVisibility { 
@@ -123,7 +123,6 @@ namespace BCQueue.ViewModels
             //creates new instances of the following public properties
             MyProfile = new Profile();
             OnlinePool = new ObservableCollection<Member>();
-            AvailablePool = new ObservableCollection<Member>();
 
             HomeViewCommand = new RelayCommand(() => ExecuteHomeViewCommand());
             MMAboutViewCommand = new RelayCommand(() => ExecuteMMAboutViewCommand());

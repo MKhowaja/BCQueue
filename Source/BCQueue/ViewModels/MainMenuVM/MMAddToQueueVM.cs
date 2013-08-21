@@ -13,35 +13,42 @@ namespace BCQueue.ViewModels.MainMenuVM
 {
     public class MMAddToQueueVM : ViewModelBase, IDropTarget
     {
+        /// <summary>
+        /// List of players who are currently waiting on the queue; Will be displayed in the Active Games view
+        /// </summary>
+        public ObservableCollection<ObservableCollection<Member>> QueueList;
 
-        public ObservableCollection<ObservableCollection<Member>> QueueList; //for the active games page
+        /// <summary>
+        /// List of players who are not in any active games nor waiting on the queue
+        /// </summary>
         public ObservableCollection<Member> AvailablePool { get; set; }
+
+        /// <summary>
+        /// Each one of these ObservableCollections should logically only hold 1 Member object.
+        /// The code is written this way as a workaround for the limitations of gong-wpf's drag'n'drop library.
+        /// This will likely be changed in the future.
+        /// </summary>
         public ObservableCollection<Member> Player1 { get; set; }
         public ObservableCollection<Member> Player2 { get; set; }
         public ObservableCollection<Member> Player3 { get; set; }
         public ObservableCollection<Member> Player4 { get; set; }
 
+        /// <summary>
+        /// This constructor initializes all the ObservableCollection properties in the ViewModel to new, empty ones
+        /// </summary>
         public MMAddToQueueVM()
         {
             AvailablePool = new ObservableCollection<Member>();
-            AvailablePool.Add(new Member("aniket verma"));
-            AvailablePool.Add(new Member("joshua fontana"));
-            AvailablePool.Add(new Member("mustaqeem khowajasdfsdaddfa"));
-            AvailablePool.Add(new Member("clement hoang"));
-            AvailablePool[0].SkillLevel = Member.sl.Intermediate;
-            AvailablePool[1].SkillLevel = Member.sl.Beginner;
-            AvailablePool[2].SkillLevel = Member.sl.Advanced;
-            AvailablePool.Add(new Member("clement dsf"));
-            AvailablePool.Add(new Member("clemsdf hoang"));
-            AvailablePool.Add(new Member("sdfement hoang"));
-            AvailablePool.Add(new Member("yuyent hoang"));
-            AvailablePool.Add(new Member("nmbement hoang"));
             Player1 = new ObservableCollection<Member>();
             Player2 = new ObservableCollection<Member>();
             Player3 = new ObservableCollection<Member>();
             Player4 = new ObservableCollection<Member>();
         }
 
+        /// <summary>
+        /// Similar to the default except it doesn't allow drop when IsDraggedIntoQueue is true
+        /// </summary>
+        /// <param name="dropInfo"></param>
         void IDropTarget.DragOver(IDropInfo dropInfo)
         {
             if (IsDraggedIntoQueue(dropInfo))
@@ -58,40 +65,52 @@ namespace BCQueue.ViewModels.MainMenuVM
             }
         }
 
+        /// <summary>
+        /// Moves the data upon drop
+        /// </summary>
+        /// <param name="dropInfo"></param>
         void IDropTarget.Drop(IDropInfo dropInfo)
         {
             var insertIndex = dropInfo.InsertIndex;
             var destinationList = GongSolutions.Wpf.DragDrop.DefaultDropHandler.GetList(dropInfo.TargetCollection);
             var data = GongSolutions.Wpf.DragDrop.DefaultDropHandler.ExtractData(dropInfo.Data);
+            var sourceList = GongSolutions.Wpf.DragDrop.DefaultDropHandler.GetList(dropInfo.DragInfo.SourceCollection);
+
+            foreach (var o in data)
             {
-                if (dropInfo.DragInfo.VisualSource == dropInfo.VisualTarget)
+                var index = sourceList.IndexOf(o);
+
+                if (index != -1)
                 {
-                    var sourceList = GongSolutions.Wpf.DragDrop.DefaultDropHandler.GetList(dropInfo.DragInfo.SourceCollection);
+                    sourceList.RemoveAt(index);
 
-                    foreach (var o in data)
+                    if (sourceList == destinationList && index < insertIndex)
                     {
-                        var index = sourceList.IndexOf(o);
-
-                        if (index != -1)
-                        {
-                            sourceList.RemoveAt(index);
-
-                            if (sourceList == destinationList && index < insertIndex)
-                            {
-                                --insertIndex;
-                            }
-                        }
+                        --insertIndex;
                     }
                 }
+            }
 
-                foreach (var o in data)
+            foreach (var o in data)
+            {
+                destinationList.Insert(insertIndex++, o);
+                //sets isBusy to true when dragged into queue and sets isBusy to false when dragged out of queue
+                if (IsDraggedIntoQueue(dropInfo))
                 {
-                    destinationList.Insert(insertIndex++, o);
+                    ((Member)o).isBusy = true;
+                }
+                else
+                {
+                    ((Member)o).isBusy = false;
                 }
             }
-            MessageBox.Show("Dropped!");
-            MessageBox.Show(((FrameworkElement)(dropInfo.VisualTarget)).Name);
         }
+
+        /// <summary>
+        /// Returns true if the VisualTarget in the DropInfo is named Player1, Player2, Player3, or Player4
+        /// </summary>
+        /// <param name="dropInfo"></param>
+        /// <returns></returns>
         bool IsDraggedIntoQueue(IDropInfo dropInfo)
         {
             string name = ((FrameworkElement)(dropInfo.VisualTarget)).Name;

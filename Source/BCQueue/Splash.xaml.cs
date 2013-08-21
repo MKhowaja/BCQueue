@@ -26,8 +26,8 @@ namespace BCQueue
         private void SplashScreenClicked(object sender, MouseButtonEventArgs e)
         {
             MainWindow main = new MainWindow();
-            main.Show();
             this.Close();
+            main.Show();
         }
     }
 }
